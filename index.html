@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Harsh Mukhiya - Computer Science Student Portfolio">
+    <title>Harsh Mukhiya | AI/ML Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --bg-color: #f8fafc;
+            --accent-color: #3b82f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('/api/placeholder/1920/1080') center/cover;
+            color: white;
+            text-align: center;
+            padding-top: 4rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        /* Social Links */
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .linkedin { background-color: #0A66C2; }
+        .github { background-color: #211F1F; }
+        .email { background-color: #EA4335; }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Experience Cards */
+        .experience-grid {
+            display: flex;
+            flex-direction: column;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .experience-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        /* Skills */
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .skill {
+        background: var(--card-bg);
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px var(--shadow-color);
+    }
+
+    .progress-bar {
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+    --progress-width: 0%; /* Default value */
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--primary-color, #3498db); /* Set your primary color */
+    border-radius: 5px;
+    width: var(--progress-width); /* Dynamic width */
+    transition: width 1s ease;
+}
+
+
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #ffffff;
+            }
+
+            .experience-card,
+            .skill-card,
+            .contact-form {
+                background: #2d2d2d;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-logo">HM</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Harsh Mukhiya</h1>
+            <p>AI/ML Developer & Full-Stack Developer</p>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/ha981muk" target="_blank" rel="noopener" class="social-link linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/ha981muk-git" target="_blank" rel="noopener" class="social-link github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="mailto:ha981muk@gmail.com" class="social-link email">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+        <div class="about-content">
+            <p>I am a Computer Science student with proven expertise in AI/ML and full-stack development, specializing in pharmaceutical research applications. My passion lies in developing innovative solutions that bridge the gap between theoretical computer science and practical applications in the pharmaceutical industry.</p>
+        </div>
+    </section>
+
+    <section id="experience" class="container">
+        <div class="section-title">
+            <h2>Experience</h2>
+        </div>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <h3>AI Development Intern</h3>
+                <p>Sanofi | Frankfurt am Main | 2024 </p>
+                <p>Led development of automated AI workflows using Netflix's Metaflow framework, processing over 1M pharmaceutical compounds.</p>
+            </div>
+
+            <div class="experience-card">
+                <h3>Data Analyst </h3>
+                <p>Sanofi | Frankfurt am Main | 2023</p>
+                <p>Optimized insulin production via data analysis and statistical methods, achieving notable efficiency gains.</p>
+
+            </div>
+
+            <div class="experience-card">
+                <h3>Full-Stack Software Developer</h3>
+                <p>Sanofi | Frankfurt am Main | 2023</p>
+                <p>Developed full-stack apps and RESTful APIs, boosting user engagement.</p>
+
+            </div>
+
+            <!-- Add more experience cards -->
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <div class="section-title">
+            <h2>Technical Skills</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+
+                <section id="skills">
+                    <div class="skills">
+                        <div class="skill">
+                            <h3>Python</h3>
+                            <div class="progress-bar" data-progress="95"></div>
+                        </div>
+                        <div class="skill">
+                            <h3>JavaScript</h3>
+                            <div class="progress-bar" data-progress="80"></div>
+                        </div>
+                        <div class="skill">
+                            <h3>Java</h3>
+                            <div class="progress-bar" data-progress="75"></div>
+                        </div>
+
+                        <div class="skill">
+                            <h3>PyTorch</h3>
+                            <div class="progress-bar" data-progress="85"></div>
+                        </div>
+                        <div class="skill">
+                            <h3>Scikit-learn</h3>
+                            <div class="progress-bar" data-progress="80"></div>
+                        </div>
+
+                        <div class="skill">
+                            <h3>SQL</h3>
+                            <div class="progress-bar" data-progress="70"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Add more skill cards -->
+
+
+            
+        </div>
+    </section>
+
+    <section id="certifications" class="container">
+        <div class="section-title">
+            <h2>CERTIFICATIONS</h2>
+        </div>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <h3>Artificial Intelligence Intern | Sanofi - 2024 </h3>
+                <p></p>
+            </div>
+
+
+
+            <div class="experience-card">
+                <h3>ML Fundamentals in Python | DataCamp - 2021</h3>
+            </div>
+
+            <div class="experience-card">
+                <h3>Gold Level in Python | HackerRank - 2024 </h3>
+            </div>
+
+
+            <div class="experience-card">
+                <h3>Fundamentals in SQL |  HackerRank - 2022</h3>
+            </div>
+            <div class="experience-card">
+                <h3>Basic in Java  | HackerRank - 2021</h3>
+            </div>
+
+
+
+            <!-- Add more experience cards -->
+        </div>
+    </section>
+
+    
+
+    
+
+    <section id="contact" class="container">
+        <div class="section-title">
+            <h2>Contact Me</h2>
+        </div>
+        <form class="contact-form" action="https://formspree.io/f/mgvvrjeb" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Harsh Mukhiya. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        document.querySelectorAll('.progress-bar').forEach(bar => {
+        const progress = bar.getAttribute('data-progress');
+        bar.style.setProperty('--progress-width', progress + '%'); // Dynamically set custom property
+});
+
+
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 1s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach((el) => observer.observe(el));
+
+        // Form submission handling
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = form.querySelector('.submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    submitBtn.textContent = 'Message Sent!';
+                    setTimeout(() => {
+                        submitBtn.textContent = 'Send Message';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                }
+            } catch (error) {
+                submitBtn.textContent = 'Error! Try Again';
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
