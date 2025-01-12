@@ -96,12 +96,16 @@
                         url('/api/placeholder/1920/1080') center/cover;
             color: white;
             text-align: center;
-            padding-top: 4rem;
+            padding-top: 8rem;
         }
 
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
+            display: grid;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;     /* Centers vertically */
+            height: 30vh;           /* Full viewport height */
         }
 
         .hero h1 {
@@ -204,40 +208,40 @@
             margin-bottom: 1rem;
         }
         /* Skills */
-    .skills {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-    }
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
 
-    .skill {
-        background: var(--card-bg);
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px var(--shadow-color);
-    }
+        .skill {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px var(--shadow-color);
+        }
 
-    .progress-bar {
-    height: 10px;
-    background: #e5e7eb;
-    border-radius: 5px;
-    margin-top: 1rem;
-    position: relative;
-    overflow: hidden;
-    --progress-width: 0%; /* Default value */
-}
+        .progress-bar {
+            height: 10px;
+            background: #e5e7eb;
+            border-radius: 5px;
+            margin-top: 1rem;
+            position: relative;
+            overflow: hidden;
+            --progress-width: 0%; /* Default value */
+        }
 
-.progress-bar::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    background: var(--primary-color, #3498db); /* Set your primary color */
-    border-radius: 5px;
-    width: var(--progress-width); /* Dynamic width */
-    transition: width 1s ease;
-}
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: var(--primary-color, #3498db); /* Set your primary color */
+            border-radius: 5px;
+            width: var(--progress-width); /* Dynamic width */
+            transition: width 1s ease;
+        }
 
 
 
@@ -330,6 +334,44 @@
                 background: #2d2d2d;
             }
         }
+
+        /*Typing Animation */
+        .typing-container {
+        background-color: #1a1a1a;
+        padding: 2rem;
+        border-radius: 8px;
+        font-family: monospace;
+        width: 950px; /* Fixed width */
+        height: 150px; /* Fixed height */
+        margin: 2rem auto;
+        overflow: hidden; /* Prevents the content from spilling out */
+        white-space: nowrap; /* Prevents text from wrapping */
+        }
+
+
+
+        .typing-text {
+        color: #00ff00;
+        font-size: 3rem;
+        white-space: pre;
+        margin: 1;
+        }
+
+        .cursor {
+        display: inline-block;
+        width: 2px;
+        height: 2em;
+        background-color: #00ff00;
+        margin-left: 2px;
+        animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+        0%, 100% { opacity: 0; }
+        50% { opacity: 1; }
+        }
+
+
     </style>
 </head>
 <body>
@@ -349,6 +391,11 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
+
+
+
+            
+            <!--   -->
             <h1>Harsh Mukhiya</h1>
             <p>AI/ML Developer & Full-Stack Developer</p>
             <div class="socials">
@@ -361,6 +408,11 @@
                 <a href="mailto:ha981muk@gmail.com" class="social-link email">
                     <i class="fas fa-envelope"></i> Email
                 </a>
+            </div>
+
+            <div class="typing-container">
+                <div class="typing-text"></div>
+                <span class="cursor"></span>
             </div>
         </div>
     </section>
@@ -482,10 +534,6 @@
         </div>
     </section>
 
-    
-
-    
-
     <section id="contact" class="container">
         <div class="section-title">
             <h2>Contact Me</h2>
@@ -524,7 +572,7 @@
         document.querySelectorAll('.progress-bar').forEach(bar => {
         const progress = bar.getAttribute('data-progress');
         bar.style.setProperty('--progress-width', progress + '%'); // Dynamically set custom property
-});
+        });
 
 
 
@@ -574,5 +622,59 @@
             }
         });
     </script>
+
+    <script>
+        class TypingEffect {
+        constructor(element, phrases, options = {}) {
+            this.element = element;
+            this.phrases = phrases;
+            this.currentPhrase = 0;
+            this.currentChar = 0;
+            this.isDeleting = false;
+            this.options = {
+            typeSpeed: options.typeSpeed || 100,
+            deleteSpeed: options.deleteSpeed || 50,
+            pauseTime: options.pauseTime || 2000
+            };
+        }
+
+        type() {
+            const phrase = this.phrases[this.currentPhrase];
+            
+            if (this.isDeleting) {
+            this.element.textContent = phrase.substring(0, this.currentChar - 1);
+            this.currentChar--;
+            } else {
+            this.element.textContent = phrase.substring(0, this.currentChar + 1);
+            this.currentChar++;
+            }
+
+            let typeSpeed = this.isDeleting ? this.options.deleteSpeed : this.options.typeSpeed;
+
+            if (!this.isDeleting && this.currentChar === phrase.length) {
+            typeSpeed = this.options.pauseTime;
+            this.isDeleting = true;
+            } else if (this.isDeleting && this.currentChar === 0) {
+            this.isDeleting = false;
+            this.currentPhrase = (this.currentPhrase + 1) % this.phrases.length;
+            typeSpeed = 500;
+            }
+
+            setTimeout(() => this.type(), typeSpeed);
+        }
+        }
+
+        // Initialize the typing effect
+        const typingElement = document.querySelector('.typing-text');
+        const phrases = [
+            'Hello, welcome to my portfolio!',
+            'I love coding',
+            'Check out my work below'
+        ];
+
+        const typing = new TypingEffect(typingElement, phrases);
+        typing.type();
+    </script>
+
 </body>
 </html>
