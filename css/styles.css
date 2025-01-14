@@ -126,6 +126,7 @@ nav {
 .linkedin { background-color: #0A66C2; }
 .github { background-color: #211F1F; }
 .email { background-color: #EA4335; }
+.cv { background-color: #60c557; }
 
 .social-link:hover {
     transform: translateY(-3px);
