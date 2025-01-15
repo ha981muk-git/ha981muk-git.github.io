@@ -3,9 +3,8 @@
 ![Website Status](https://img.shields.io/badge/Status-Live-brightgreen)
 ![Formspree](https://img.shields.io/badge/Formspree-Contact-brightgreen)
 ![Google Analytics](https://img.shields.io/badge/Google%20Analytics-Data%20Tracking-blue)
-
 ![Hosted on GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-blueviolet)
-![GitHub Repo stars](https://img.shields.io/github/stars/ha981muk-git/portfolio-website?style=social)
+
 
 
 
