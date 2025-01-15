@@ -45,21 +45,26 @@ Visit my portfolio website: [https://ha981muk-git.github.io/](https://ha981muk-g
 
 ## Project Structure
 ```
-├── index.html
-├── css/
-│   ├── styles.css
-│   └── components/
-│       ├── skill.css
-│       ├── typingEffect.css
-│       └── contactForm.css
-├── js/
-│   ├── scripts.js
-│   └── modules/
-│       ├── analysisGoogle.js
-│       └── typingEffect.js
-└── assets/
-    └── docs/
-        └── cv.pdf
+├── LICENSE                   # License file for the project
+├── README.md                 # Project documentation (installation, setup, usage)
+├── assets/                   # Static assets like images, fonts, documents
+│   ├── docs/                 # Documentation files (e.g., CVs, guides)
+│   │   └── cv.pdf            # Curriculum Vitae or other important documents
+│   ├── fonts/                # Custom fonts used in the project
+│   └── images/               # Images (e.g., logos, icons, illustrations)
+├── css/                      # CSS files for styling
+│   ├── components/           # Component-specific styles for better modularity
+│   │   ├── contactForm.css   # Styles for the contact form component
+│   │   ├── skill.css         # Styles for the skills section
+│   │   └── typingEffect.css  # Styles for the typing effect
+│   └── styles.css            # Main stylesheet with global styles
+├── index.html                # Main HTML file for the landing page or homepage
+└── js/                       # JavaScript files for functionality
+    ├── modules/              # Reusable, modular JavaScript code
+    │   ├── analysisGoogle.js # Google Analytics or tracking scripts
+    │   └── typingEffect.js   # JavaScript for typing effect functionality
+    └── scripts.js            # Main JS file for page-specific logic
+
 ```
 
 ## Setup and Installation
