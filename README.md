@@ -102,7 +102,9 @@ Visit my portfolio website: [https://ha981muk-git.github.io/](https://ha981muk-g
 - Enhance accessibility features
 
 ## License
-All rights reserved - Harsh Mukhiya © 2025
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
 
 ## Connect With Me
 - 🌐 Portfolio: [https://ha981muk-git.github.io/](https://ha981muk-git.github.io/)
