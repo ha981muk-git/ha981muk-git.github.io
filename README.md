@@ -1,5 +1,26 @@
 # Personal Portfolio Website - Harsh Mukhiya
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Website Status](https://img.shields.io/badge/Status-Live-brightgreen)
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+
+![Formspree](https://img.shields.io/badge/Formspree-Contact-brightgreen)
+![Google Analytics](https://img.shields.io/badge/Google%20Analytics-Data%20Tracking-blue)
+
+![Hosted on GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-blueviolet)
+![GitHub Repo stars](https://img.shields.io/github/stars/ha981muk-git/portfolio-website?style=social)
+
+# Personal Portfolio Website - Harsh Mukhiya
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Website Status](https://img.shields.io/badge/Status-Live-brightgreen)
+![Visitors](https://visitor-badge.glitch.me/badge?page_id=ha981muk-git.portfolio)
+![Hosted on GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-blueviolet)
+
+A modern, responsive portfolio website showcasing my work as an AI/ML and Full-Stack Developer.
+
 
 ## Overview
 A modern, responsive portfolio website showcasing my work as an AI/ML and Full-Stack Developer. The website features a clean design with smooth animations, dynamic content, and interactive elements.
