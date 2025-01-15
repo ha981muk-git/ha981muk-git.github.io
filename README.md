@@ -1,4 +1,5 @@
 # Personal Portfolio Website - Harsh Mukhiya
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
 A modern, responsive portfolio website showcasing my work as an AI/ML and Full-Stack Developer. The website features a clean design with smooth animations, dynamic content, and interactive elements.
@@ -102,7 +103,7 @@ Visit my portfolio website: [https://ha981muk-git.github.io/](https://ha981muk-g
 - Enhance accessibility features
 
 ## License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 
