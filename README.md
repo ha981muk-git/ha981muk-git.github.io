@@ -7,9 +7,6 @@
 ![Hosted on GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-blueviolet)
 ![GitHub Repo stars](https://img.shields.io/github/stars/ha981muk-git/portfolio-website?style=social)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Website Status](https://img.shields.io/badge/Status-Live-brightgreen)
-![Visitors](https://visitor-badge.glitch.me/badge?page_id=ha981muk-git.portfolio)
 
 
 A modern, responsive portfolio website showcasing my work as an AI/ML and Full-Stack Developer.
