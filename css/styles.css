@@ -169,3 +169,38 @@ section {
     transform: translateY(-5px);
 }
 
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.language-btn {
+    padding: 8px 16px;
+    background-color: #333;
+    color: rgb(14, 13, 13);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.language-btn:hover {
+    background-color: #ef1f1f;
+}
+
+
+        [lang="de"] {
+            display: none;
+        }
+
+        .de [lang="en"] {
+            display: none;
+        }
+
+        .de [lang="de"] {
+            display: block;
+        }
+
