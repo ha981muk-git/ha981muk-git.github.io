@@ -1,0 +1,43 @@
+:root {
+    /* Light mode defaults */
+    --primary-color: #2A2A72;
+    --secondary-color: #009FFD;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+}
+
+.dark-mode {
+    /* Dark mode overrides */
+    --primary-color: #6c8dfa;
+    --secondary-color: #4dabf7;
+    --background-color: #1a1a1a;
+    --text-color: #e9ecef;
+    --card-bg: #2d2d2d;
+    --navbar-bg: rgba(45, 45, 45, 0.95);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    background: var(--navbar-bg) !important;
+}
+
+.card {
+    background-color: var(--card-bg);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+/* Add these transitions */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Disable transitions during initial load */
+body.preload * {
+    transition: none !important;
+}

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="en-DE"> <!-- For German context -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI/ML Developer portfolio showcasing Harsh Mukhiya's projects, experience, and technical skills in pharmaceutical research applications">
     <title>Harsh Mukhiya - AI/ML Developer</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -10,6 +12,8 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BXKLXCKJ8X"></script>
     <script src="js/analysisGoogle.js"></script>
+
+    
 
     <style>
         :root {
@@ -45,8 +49,10 @@
         }
 
         .profile-image {
+            margin-top: 8px;
+            height: calc(250px*1.118);
             width: 250px;
-            height: 250px;
+            
             border-radius: 50%;
             border: 5px solid white;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -266,6 +272,8 @@
         transform: translateY(-2px);
     }
     </style>
+    <!-- Navigation not used   <link rel="stylesheet" href="css/darkmode.css"> -->
+   
     
 </head>
 <body>
@@ -289,6 +297,9 @@
         </div>
     </nav>
 
+    <!-- Add this button just before closing </body> tag -->
+    <div id="dark-mode-container"></div>
+
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
@@ -299,7 +310,13 @@
                     <a href="#contact" class="btn btn-light btn-lg mt-3">Let's Connect</a>
                 </div>
                 <div class="col-md-6 text-center" data-aos="fade-left">
-                    <img src="assets/images/profile-placeholder.jpg" alt="Profile" class="profile-image">
+                    <!-- Add missing alt text for profile image -->
+                    <img loading="lazy"
+                         src="assets/images/profile-placeholder.jpg" 
+                         alt="Harsh Mukhiya professional portrait" 
+                         class="profile-image">
+
+
                 </div>
             </div>
         </div>
@@ -544,7 +561,7 @@
                 <div class="col-lg-4 mb-4" data-aos="zoom-in">
                     <div class="certification-card">
                         <div class="certification-header">
-                            <i class="fas fa-robot certification-icon"></i>
+                            <i class="fas fa-shield-alt certification-icon"></i>
                             <div class="certification-badge">NEW</div>
                         </div>
                         <div class="certification-body">
@@ -746,6 +763,13 @@
 
 
 <script>
+
+// Add preload class initially
+document.documentElement.classList.add('preload');
+window.addEventListener('load', () => {
+    document.documentElement.classList.remove('preload');
+});
+
 // Form Submission Handling
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -779,6 +803,10 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
 });
 
 AOS.init({ duration: 1000, once: true });
+
+// <script src="js/darkmode.js"></script>></script>
 </script>
+
+
 </body>
 </html>
