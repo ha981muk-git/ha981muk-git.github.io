@@ -39,4 +39,5 @@ Visit my portfolio website: [https://ha981muk-git.github.io/](https://ha981muk-g
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ha981muk-git/portfolio.git
+git clone https://github.com/ha981muk-git/ha981muk-git.github.io.git
+```
