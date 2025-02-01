@@ -10,6 +10,10 @@
 
 A modern, responsive portfolio website showcasing AI/ML development expertise and full-stack capabilities.
 
+
+## Live Demo
+Visit my portfolio website: [https://ha981muk-git.github.io/](https://ha981muk-git.github.io/)
+
 ## Features
 
 - 🚀 **Modern UI Design** with smooth animations
