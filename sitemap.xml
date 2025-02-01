@@ -6,21 +6,28 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
    <url>
-      <loc>https://ha981muk-git.github.io/</loc>
-      <lastmod>2025-02-01T14:24:00+00:00</lastmod>
+      <loc>https://harshmukhiya.codes/</loc>
+      <lastmod>2025-02-01T20:24:00+00:00</lastmod>
       <priority>1.00</priority>
+      <changefreq>monthly</changefreq>
+   </url>
+
+      <url>
+      <loc>https://www.linkedin.com/in/ha981muk/</loc>
+      <lastmod>2025-02-01T20:24:00+00:00</lastmod>
+      <priority>0.8</priority>
    </url>
 
    <url>
-      <loc>https://www.linkedin.com/in/ha981muk/</loc>
-      <lastmod>2025-02-01T14:24:00+00:00</lastmod>
-      <priority>0.5</priority>
+      <loc>https://ha981muk-git.github.io/</loc>
+      <lastmod>2025-02-01T20:24:00+00:00</lastmod>
+      <priority>0.60</priority>
    </url>
 
    <url>
       <loc>https://github.com/ha981muk-git</loc>
-      <lastmod>2025-02-01T14:24:00+00:00</lastmod>
-      <priority>0.5</priority>
+      <lastmod>2025-02-01T20:24:00+00:00</lastmod>
+      <priority>0.40</priority>
    </url>
 
 </urlset>
