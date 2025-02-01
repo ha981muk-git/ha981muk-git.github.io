@@ -4,8 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI/ML Developer portfolio showcasing Harsh Mukhiya's projects, experience, and technical skills in pharmaceutical research applications">
     <title>Harsh Mukhiya - AI/ML Developer</title>
+    <meta name="description" content="AI/ML Developer portfolio showcasing Harsh Mukhiya's projects, experience, and technical skills in pharmaceutical applications">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Harsh Mukhiya",
+            "jobTitle": "AI Developer & Data Scientist",
+            "url": "https://ha981muk-git.github.io/",
+            "sameAs": [
+                "https://www.linkedin.com/in/ha981muk/",
+                "https://github.com/ha981muk-git"
+            ],
+            "skills": "Python, PyTorch, Machine Learning, AI Development, Data Analysis, Full-Stack Development",
+            "image": "https://ha981muk-git.github.io/assets/images/profile-placeholder.jpg"  <!-- Add a profile photo URL -->
+        }
+        </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -670,13 +687,18 @@
     
 
     <!-- Social Links -->
+<!-- HTML - Add data-tooltip attribute to each link -->
     <div class="social-links">
-        <a href="https://www.linkedin.com/in/ha981muk"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/ha981muk-git"><i class="fab fa-github"></i></a>
-        <!--<a href="#"><i class="fab fa-twitter"></i></a>-->
+        <a href="https://www.linkedin.com/in/ha981muk" data-tooltip="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/ha981muk-git" data-tooltip="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
         <a href="assets/docs/cv.pdf" 
-        download="Harsh_Mukhiya_Resume.pdf">
-        <i class="fas fa-file-alt"></i>
+        download="Harsh_Mukhiya_Resume.pdf"
+        data-tooltip="Download Resume">
+            <i class="fas fa-file-alt"></i>
         </a>
     </div>
 
