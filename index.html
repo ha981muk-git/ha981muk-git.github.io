@@ -294,6 +294,7 @@
     
 </head>
 <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
@@ -710,6 +711,10 @@
         </a>
     </div>
 
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -736,6 +741,29 @@
             }
         });
     </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+    window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#000"
+                },
+                "button": {
+                    "background": "#f1d600"
+                }
+            },
+            "theme": "classic",
+            "content": {
+                "message": "This website uses cookies to ensure you get the best experience on our website.",
+                "dismiss": "Got it!",
+                "link": "Learn more",
+                "href": "/privacy-policy.html"
+            }
+        })
+    });
+</script>
 
     <!-- Contact Section -->
 <section id="contact" class="section">
@@ -837,6 +865,12 @@ AOS.init({ duration: 1000, once: true });
 </script>
 <!--<script src="js/darkmode.js"></script></script>--> 
 
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Harsh Mukhiya. All rights reserved. <a href="privacy-policy.html">Privacy Policy</a></p>
+    </div>
+</footer>
 
 </body>
 </html>
