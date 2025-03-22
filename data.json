@@ -1,0 +1,115 @@
+{
+    "projects": [
+      {
+        "title": "IoT Gaming System",
+        "date": "Mar 2023 - Jul 2023",
+        "description": [
+          "🎮 Built wireless gaming controller with Bosch BNO055 Sensor Module",
+          "📡 Processed 50+ sensor inputs/second"
+        ],
+        "techStack": ["Python", "IoT", "C"],
+        "repoLink": "https://github.com/ha981muk-git/nordic-bno055"
+      },
+      {
+        "title": "Personal Portfolio Website",
+        "date": "Jan 2025 - Feb 2025",
+        "description": [
+          "🛠️ Developed responsive portfolio using HTML/CSS/JavaScript",
+          "🚀 Deployed on current custom domain"
+        ],
+        "techStack": ["JavaScript", "HTML5", "CSS"],
+        "repoLink": "https://github.com/ha981muk-git/ha981muk-git.github.io"
+      },
+      {
+        "title": "Messaging Platform",
+        "date": "Java Backend | 2023",
+        "description": [
+          "🚀 Built real-time message handling 10+ concurrent connections",
+          "🔒 Implemented end-to-end encryption for secure communication",
+          "📁 Developed file transfer protocol with chunked uploads"
+        ],
+        "techStack": ["Java", "Socket.IO", "Gradle"],
+        "repoLink": "https://github.com/ha981muk-git/chat-messanger"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Artificial Intelligence and Deep Learning",
+        "company": "Sanofi-Aventis Deutschland GmbH",
+        "date": "Aug 2024 - Nov 2024",
+        "tasks": [
+          "✅ Spearheaded automated AI workflows using Metaflow",
+          "✅ Integrated RDKit and PyTorch in scalable pipelines"
+        ]
+      },
+      {
+        "title": "Data Analyst",
+        "company": "Sanofi-Aventis Deutschland GmbH",
+        "date": "Aug 2023 - Oct 2023",
+        "tasks": [
+          "📊 Optimized insulin production through data analysis",
+          "📈 Created production dashboards with Python/Seaborn"
+        ]
+      },
+      {
+        "title": "Software Developer",
+        "company": "Sanofi-Aventis Deutschland GmbH",
+        "date": "Feb 2023 - Apr 2023",
+        "tasks": [
+          "💻 Built full-stack apps with Flask/JavaScript",
+          "⚡ Engineered REST APIs handling 1000+ RPM"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "title": "Artificial Intelligence Intern",
+        "organization": "Sanofi",
+        "date": "2024",
+        "tags": ["Deep Learning", "Pharma AI"]
+      },
+      {
+        "title": "ML Fundamentals in Python",
+        "organization": "DataCamp",
+        "date": "2021",
+        "tags": ["Scikit-learn", "Pandas"]
+      },
+      {
+        "title": "Gold Level in Python",
+        "organization": "HackerRank",
+        "date": "2024",
+        "tags": ["Algorithms", "Problem Solving"]
+      },
+      {
+        "title": "Web Developer Security Training",
+        "organization": "Hackplaining",
+        "date": "2025",
+        "tags": ["OWASP", "Encryption", "Security Best Practices"]
+      },
+      {
+        "title": "Fundamentals in SQL",
+        "organization": "HackerRank",
+        "date": "2022",
+        "tags": ["Queries", "Database Design"]
+      }
+    ], 
+    "skills": [
+        {
+        "category": "AI/ML Stack",
+        "skills": ["Python", "PyTorch", "Scikit-learn", "Metaflow"]
+        },
+        {
+        "category": "Data Science",
+        "skills": ["Pandas", "NumPy", "Matplotlib", "Seaborn"]
+        },
+        {
+        "category": "Programming",
+        "skills": ["Python", "Java", "JavaScript", "SQL"]
+        },
+        {
+        "category": "DevOps & Tools",
+        "skills": ["Git", "Linux CLI", "Bash-Script", "Gradle"]
+        }
+    ]
+      
+  }
