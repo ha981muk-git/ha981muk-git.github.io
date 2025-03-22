@@ -42,7 +42,3 @@ Visit my portfolio website: [https://ha981muk-git.github.io/](https://ha981muk-g
 git clone https://github.com/ha981muk-git/ha981muk-git.github.io.git
 
 ```
-
-
-## Upcoming Update
-- **Refactoring Html Code**: Ruducing html code and using json for data fetching, phototype already exist, just need to work further
