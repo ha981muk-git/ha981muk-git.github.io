@@ -285,6 +285,14 @@
             });
 
             // Load Certifications
+            const certificationIcon = [
+                "fas fa-robot", 
+                "fas fa-brain",  
+                "fab fa-python",  // Correct: "fab" instead of "fas"
+                "fas fa-lock", 
+                "fas fa-database"
+            ];
+
             const certificationsContainer = document.getElementById('certifications-container');
             data.certifications.forEach((cert, index) => {
                 const certificationElement = document.createElement('div');
@@ -294,7 +302,7 @@
                 certificationElement.innerHTML = `
                     <div class="certification-card">
                         <div class="certification-header">
-                            <i class="fas fa-shield-alt certification-icon"></i>
+                            <i class="${certificationIcon[index % certificationIcon.length]} certification-icon"></i>
                             ${cert.tags.includes('NEW') ? '<div class="certification-badge">NEW</div>' : ''}
                         </div>
                         <div class="certification-body">
