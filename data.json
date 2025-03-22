@@ -1,13 +1,15 @@
 {
     "projects": [
       {
-        "title": "IoT Gaming System",
-        "date": "Mar 2023 - Jul 2023",
+        "title": "Fullstack File Sharing Platform",
+        "date": "Feb 2025 - present",
         "description": [
-          "🎮 Built wireless gaming controller with Bosch BNO055 Sensor Module",
-          "📡 Processed 50+ sensor inputs/second"
+          "📁 Developing secure temporary file sharing with auto-deletion",
+          "⏳ Implemented expiration timers (24h/custom durations)",
+          "🔒 Added password protection & malware scanning",
+          "📈 Handled 500+ daily uploads with Celery task queue"
         ],
-        "techStack": ["Python", "IoT", "C"],
+        "techStack": ["Django", "Celery","Redis", "PostgreSQL", "Bootstrap"],
         "repoLink": "https://github.com/ha981muk-git/nordic-bno055"
       },
       {
