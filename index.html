@@ -125,61 +125,11 @@
     <section id="projects" class="section bg-light">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">Projects</h2>
-        <div class="row">
-          <!-- IoT Gaming -->
-          <div class="col-lg-4 mb-4" data-aos="zoom-in">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Fullstack File Sharing Platform</h5>
-                <p class="text-muted">Feb 2025 - present</p>
-                <ul class="list-unstyled">
-                  <li class="mb-2">📁 Developing secure temporary file sharing with auto-deletion</li>
-                  <li class="mb-2">⏳ Implemented expiration timers (24h/custom durations)</li>
-                  <li class="mb-2">🔒 Added password protection & malware scanning</li>
-                  <li class="mb-2">📈 Handled 500+ daily uploads with Celery task queue</li>
-                </ul>
-                <div class="tech-stack">
-                  <span class="badge bg-primary">Django</span> <span class="badge bg-secondary">Celery</span> <span class="badge bg-success">Redis</span> <span class="badge bg-danger">PostgreSQL</span> <span class="badge bg-warning text-dark">Bootstrap</span>
-                </div>
-              </div>
-            </div>
-          </div><!-- Medical Imaging -->
-          <div class="col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Personal Portfolio Website</h5>
-                <p class="text-muted">Jan 2025 - Feb 2025</p>
-                <ul class="list-unstyled">
-                  <li class="mb-2">🛠️ Developed responsive portfolio using HTML/CSS/JavaScript</li>
-                  <li class="mb-2">🚀 Deployed on current custom domain <a href="https://harshmukhiya.codes" target="_blank" class="text-decoration-none" style="color: inherit;"><span class="text-muted">→</span> harshmukhiya.codes</a>
-                  </li>
-                </ul>
-                <div class="tech-stack">
-                  <span class="badge bg-primary">JavaScript</span> <span class="badge bg-secondary">HTML5</span> <span class="badge bg-success">CSS</span>
-                </div><a href="https://github.com/ha981muk-git/ha981muk-git.github.io" class="btn btn-outline-primary mt-3">View Repository</a>
-              </div>
-            </div>
-          </div><!-- Add to Projects Section -->
-          <!-- Messaging Application -->
-          <div class="col-lg-4 mb-4" data-aos="zoom-in">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Messaging Platform</h5>
-                <p class="text-muted">Java Backend | 2023</p>
-                <ul class="list-unstyled">
-                  <li class="mb-2">🚀 Built real-time message handling 10+ concurrent connections</li>
-                  <li class="mb-2">🔒 Implemented end-to-end encryption for secure communication</li>
-                  <li class="mb-2">📁 Developed file transfer protocol with chunked uploads</li>
-                </ul>
-                <div class="tech-stack">
-                  <span class="badge bg-primary">Java</span> <span class="badge bg-secondary">Socket.IO</span> <span class="badge bg-success">Gradle</span>
-                </div><a href="https://github.com/ha981muk-git/chat-messanger" class="btn btn-outline-primary mt-3">View Repository</a>
-              </div>
-            </div>
-          </div>
+        <div class="row" id="projects-container">
+          <!-- Projects will be loaded here -->
         </div>
       </div>
-    </section><!-- Skills Section (Updated) -->
+    </section><!-- Skills Section -->
     <section id="skills" class="section">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
@@ -285,6 +235,33 @@
         .then(response => response.json())
         .then(data => {
             // Load Projects
+            const colors = ["bg-danger", "bg-primary", "bg-success",  "bg-warning", "bg-info"]; // Bootstrap color classes
+            // Load Projects
+            const projectsContainer = document.getElementById('projects-container');
+                data.projects.forEach(project => {
+                    const projectElement = document.createElement('div');
+                    projectElement.classList.add('col-lg-4', 'mb-4');
+                    projectElement.setAttribute('data-aos', 'zoom-in');
+                    
+                    projectElement.innerHTML = `
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">${project.title}</h5>
+                                <p class="text-muted">${project.date}</p>
+                                <ul class="list-unstyled">
+                                    ${project.description.map(desc => `<li class="mb-2">${desc}</li>`).join('')}
+                                </ul>
+                                <div class="tech-stack">
+                                    ${project.techStack.map((tech, index) => `<span class="badge ${colors[index % colors.length]}">${tech}</span>`).join(' ')}
+                                </div>
+                                <a href="${project.repoLink}" class="btn btn-outline-primary mt-3">
+                                    <i class="fab fa-github"></i> View Repository
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    projectsContainer.appendChild(projectElement);
+            });
             // Load Experience
             const experienceContainer = document.getElementById('experience-container');
             data.experience.forEach((exp, index) => {

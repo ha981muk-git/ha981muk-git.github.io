@@ -9,7 +9,7 @@
           "🔒 Added password protection & malware scanning",
           "📈 Handled 500+ daily uploads with Celery task queue"
         ],
-        "techStack": ["Django", "Celery","Redis", "PostgreSQL", "Bootstrap"],
+        "techStack": ["Django", "PostgreSQL", "Celery","Redis", "Bootstrap"],
         "repoLink": ""
       },
       {
@@ -17,7 +17,7 @@
         "date": "Jan 2025 - Feb 2025",
         "description": [
           "🛠️ Developed responsive portfolio using HTML/CSS/JavaScript",
-          "🚀 Deployed on current custom domain"
+          "🚀 Deployed on current custom domain <a href=\"https://harshmukhiya.codes\" target=\"_blank\" class=\"text-decoration-none\" style=\"color: inherit;\"><span class=\"text-muted\">→</span> harshmukhiya.codes</a>"
         ],
         "techStack": ["JavaScript", "HTML5", "CSS"],
         "repoLink": "https://github.com/ha981muk-git/ha981muk-git.github.io"
