@@ -10,7 +10,7 @@
           "📈 Handled 500+ daily uploads with Celery task queue"
         ],
         "techStack": ["Django", "Celery","Redis", "PostgreSQL", "Bootstrap"],
-        "repoLink": "https://github.com/ha981muk-git/nordic-bno055"
+        "repoLink": ""
       },
       {
         "title": "Personal Portfolio Website",
