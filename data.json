@@ -6,8 +6,7 @@
         "description": [
           "📁 Developing secure temporary file sharing with auto-deletion",
           "⏳ Implemented expiration timers (24h/custom durations)",
-          "🔒 Added password protection & malware scanning",
-          "📈 Handled 500+ daily uploads with Celery task queue"
+          "🔒 Added password protection & malware scanning"
         ],
         "techStack": ["Django", "PostgreSQL", "Celery","Redis", "Bootstrap"],
         "repoLink": ""
