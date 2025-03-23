@@ -93,6 +93,13 @@
         "date": "2022",
         "tags": ["Queries", "Database Design"]
       }
+      ,
+      {
+        "title": "Silver Level in Java",
+        "organization": "HackerRank",
+        "date": "2024",
+        "tags": ["Algorithms", "Data Structures", "Problem Solving"]
+      }
     ], 
     "skills": [
         {
