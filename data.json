@@ -40,7 +40,7 @@
         "date": "Aug 2024 - Nov 2024",
         "tasks": [
           "✅ Spearheaded automated AI workflows using Metaflow",
-          "✅ Integrated RDKit and PyTorch in scalable pipelines"
+          "✅ Integrated RDKit, Scikit-learn and PyTorch in scalable pipelines"
         ]
       },
       {
@@ -57,7 +57,7 @@
         "company": "Sanofi-Aventis Deutschland GmbH",
         "date": "Feb 2023 - Apr 2023",
         "tasks": [
-          "💻 Built full-stack apps with Flask/JavaScript",
+          "💻 Built full-stack apps with Django/JavaScript",
           "⚡ Engineered REST APIs handling 1000+ RPM"
         ]
       }
