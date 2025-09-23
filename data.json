@@ -35,6 +35,16 @@
     ],
     "experience": [
       {
+        "title": "Biostatistics and Programming",
+        "company": "Sanofi-Aventis Deutschland GmbH",
+        "date": "Aug 2025 - Present",
+        "tasks": [
+          "📊 Developed R programs to accelerate statistical analyses with clear, intuitive visualizations",
+          "🧮 Applied Bayesian statistical approaches to enhance uncertainty measurement and data-driven decision-making",
+          "📈 Designed study methodologies to strengthen decision-making in clinical trials and research projects"
+        ]
+      },
+      {
         "title": "Artificial Intelligence and Deep Learning",
         "company": "Sanofi-Aventis Deutschland GmbH",
         "date": "Aug 2024 - Nov 2024",
@@ -112,11 +122,11 @@
         },
         {
         "category": "Programming",
-        "skills": ["Python", "Java", "JavaScript", "SQL"]
+        "skills": ["Python", "R","Java", "JavaScript"]
         },
         {
         "category": "DevOps & Tools",
-        "skills": ["Git", "Linux CLI", "Bash-Script", "Gradle"]
+        "skills": ["Git", "Linux CLI", "R Shiny App", "Bash-Script"]
         }
     ]
       
