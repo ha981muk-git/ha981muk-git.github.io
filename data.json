@@ -1,15 +1,15 @@
 {
     "projects": [
       {
-        "title": "Fullstack File Sharing Platform",
-        "date": "Feb 2025 - present",
+        "title": "6/49 Statistical Visualizations Shiny App",
+        "date": "Sept 2025 - Oct 2025",
         "description": [
-          "📁 Developing secure temporary file sharing with auto-deletion",
-          "⏳ Implemented expiration timers (24h/custom durations)",
-          "🔒 Added password protection & malware scanning"
+          "🎲 Explore an interactive Shiny dashboard built for Lotto 6/49 data analysis.",
+          "📊 Discover historical draw through dynamic charts and visualizations.",
+          "🚀 Check it out live and interact with the data yourself: <a href='https://lottery-insights.shinyapps.io/lottery_shinyapp_v2/' target='_blank' style='color:#8b5cf6; font-weight:bold; text-decoration:none;'>[Click me]</a>"
         ],
-        "techStack": ["Django", "PostgreSQL", "Celery","Redis", "Bootstrap"],
-        "repoLink": ""
+        "techStack": ["R Programming", "HTML5", "CSS", "R Shiny"],
+        "repoLink": "https://lottery-insights.shinyapps.io/lottery_shinyapp_v2/"
       },
       {
         "title": "Personal Portfolio Website",
