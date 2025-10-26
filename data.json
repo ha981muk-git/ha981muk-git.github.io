@@ -1,12 +1,23 @@
 {
     "projects": [
       {
+        "title": "Automatic Classification of German Business Documents using BERT",
+        "date": "Nov 2025 - Present",
+        "description": [
+          "🤖 Developed a BERT-based system to automatically classify German business documents such as invoices, contracts, and complaints.",
+          "📊 Built and compared multiple German BERT variants",
+          "🚀 Exposed the model via a REST API with a minimal web interface for real-time classification."
+        ],
+        "techStack": ["Python 3.10+", "PyTorch", "Hugging Face Transformers", "scikit-learn", "FastAPI / Flask"],
+        "repoLink": "https://github.com/ha981muk-git/german-doc-classification"
+      },
+      {
         "title": "6/49 Statistical Visualizations Shiny App",
-        "date": "Sept 2025 - Oct 2025",
+        "date": "Sept 2025 - Present",
         "description": [
           "🎲 Explore an interactive Shiny dashboard built for Lotto 6/49 data analysis.",
           "📊 Discover historical draw through dynamic charts and visualizations.",
-          "🚀 Check it out live and interact with the data yourself: <a href='https://lottery-insights.shinyapps.io/lottery_shinyapp_v2/' target='_blank' style='color:#8b5cf6; font-weight:bold; text-decoration:none;'>[Click me]</a>"
+          "🚀 Check it out live and interact with the data yourself: <a href='https://lotteryinsights.dpdns.org/' target='_blank' style='color:#8b5cf6; font-weight:bold; text-decoration:none;'>[Click me]</a>"
         ],
         "techStack": ["R Programming", "HTML5", "CSS", "R Shiny"],
         "repoLink": "https://lottery-insights.shinyapps.io/lottery_shinyapp_v2/"
@@ -20,17 +31,6 @@
         ],
         "techStack": ["JavaScript", "HTML5", "CSS"],
         "repoLink": "https://github.com/ha981muk-git/ha981muk-git.github.io"
-      },
-      {
-        "title": "Messaging Platform",
-        "date": "Java Backend | 2023",
-        "description": [
-          "🚀 Built real-time message handling 10+ concurrent connections",
-          "🔒 Implemented end-to-end encryption for secure communication",
-          "📁 Developed file transfer protocol with chunked uploads"
-        ],
-        "techStack": ["Java", "Socket.IO", "Gradle"],
-        "repoLink": "https://github.com/ha981muk-git/chat-messanger"
       }
     ],
     "experience": [
