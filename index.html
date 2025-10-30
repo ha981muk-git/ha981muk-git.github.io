@@ -298,24 +298,31 @@
     });
     
     // Cookie Consent
+    // Cookie Consent with error handling
     window.addEventListener("load", function(){
-      window.cookieconsent.initialise({
-        "palette": {
-          "popup": {
-            "background": "#000"
-          },
-          "button": {
-            "background": "#f1d600"
-          }
-        },
-        "theme": "classic",
-        "content": {
-          "message": "This website uses cookies to ensure you get the best experience on our website.",
-          "dismiss": "Got it!",
-          "link": "Learn more",
-          "href": "/privacy-policy.html"
+      if (window.cookieconsent) {
+        try {
+          window.cookieconsent.initialise({
+            "palette": {
+              "popup": {
+                "background": "#000"
+              },
+              "button": {
+                "background": "#f1d600"
+              }
+            },
+            "theme": "classic",
+            "content": {
+              "message": "This website uses cookies to ensure you get the best experience on our website.",
+              "dismiss": "Got it!",
+              "link": "Learn more",
+              "href": "/privacy-policy.html"
+            }
+          });
+        } catch (error) {
+          console.log('Cookie consent not available');
         }
-      });
+      }
     });
     
     // Form Submission Handling
