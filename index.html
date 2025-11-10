@@ -344,10 +344,14 @@
 
   AOS.init({ duration: 1000, once: true });
 
-  // Smooth scroll
+  // Smooth scroll (skip bare "#" links)
   $('a[href*="#"]').on('click', function (e) {
+    const targetSelector = $(this).attr('href');
+    if (!targetSelector || targetSelector === '#') return;
+    const target = $(targetSelector);
+    if (!target.length) return;
     e.preventDefault();
-    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 70 }, 500);
+    $('html, body').animate({ scrollTop: target.offset().top - 70 }, 500);
   });
 
   // Navbar background on scroll
