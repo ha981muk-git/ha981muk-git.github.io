@@ -348,7 +348,13 @@
   $('a[href*="#"]').on('click', function (e) {
     const targetSelector = $(this).attr('href');
     if (!targetSelector || targetSelector === '#') return;
-    const target = $(targetSelector);
+    let target;
+    try {
+      target = $(targetSelector);
+    } catch (err) {
+      console.warn('Skipping malformed selector', targetSelector, err);
+      return;
+    }
     if (!target.length) return;
     e.preventDefault();
     $('html, body').animate({ scrollTop: target.offset().top - 70 }, 500);
