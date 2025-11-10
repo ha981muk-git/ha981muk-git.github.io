@@ -651,18 +651,6 @@
     animation: fadeIn 0.8s ease forwards;
   }
   
-  /* Cookie Consent */
-  .cc-window {
-    border-radius: 10px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
-  }
-  
-  .cc-btn {
-    border-radius: 30px !important;
-    font-weight: 600 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
-  }
   
   /* Spinner */
   .spinner-border {
@@ -698,6 +686,30 @@
       box-shadow: none;
       border: 1px solid #ddd;
     }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #28a745;
+    background-color: #28a745;
+  }
+  .custom-control-label::before {
+    width: 2.25rem;
+    height: 1.15rem;
+    pointer-events: all;
+    border-radius: 1rem;
+  }
+  .custom-control-label::after {
+    top: .15rem;
+    left: .15rem;
+    width: .85rem;
+    height: .85rem;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform .15s ease-in-out;
+  }
+  .custom-control-input:checked ~ .custom-control-label::after {
+    transform: translateX(1rem);
   }
 
 

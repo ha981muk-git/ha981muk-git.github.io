@@ -1,106 +1,115 @@
 <!DOCTYPE html>
 <html lang="en-DE">
-<!-- For German context -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="AI, ML, Developer, Portfolio, Harsh Mukhiya, Full-Stack Development">
-  <meta name="author" content="Harsh Mukhiya">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="AI, ML, Developer, Portfolio, Harsh Mukhiya, Full-Stack Development" />
+  <meta name="author" content="Harsh Mukhiya" />
   <title>Harsh Mukhiya - AI/ML Developer</title>
-  <meta name="description" content="AI/ML Developer portfolio showcasing Harsh Mukhiya's projects, experience, and technical skills in pharmaceutical applications">
-  
-  <!-- Open Graph / Social Media Meta Tags -->
-  <meta property="og:title" content="Harsh Mukhiya - AI/ML Developer">
-  <meta property="og:description" content="AI/ML Developer portfolio showcasing Harsh Mukhiya's projects, experience, and technical skills">
-  <meta property="og:image" content="https://ha981muk-git.github.io/assets/images/profile-placeholder.jpg">
-  <meta property="og:url" content="https://ha981muk-git.github.io/">
-  <meta property="og:type" content="website">
-  
-  <!-- Schema Markup -->
+  <meta name="description" content="AI/ML Developer portfolio showcasing Harsh Mukhiya's projects, experience, and technical skills in pharmaceutical applications" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Harsh Mukhiya - AI/ML Developer" />
+  <meta property="og:description" content="AI/ML Developer portfolio showcasing Harsh Mukhiya's projects, experience, and technical skills" />
+  <meta property="og:image" content="https://ha981muk-git.github.io/assets/images/profile-placeholder.jpg" />
+  <meta property="og:url" content="https://ha981muk-git.github.io/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Schema -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Harsh Mukhiya",
-      "jobTitle": "AI/ML Development & Full-Stack Development",
-      "url": "https://ha981muk-git.github.io/",
-      "sameAs": [
-        "https://www.linkedin.com/in/ha981muk/",
-        "https://github.com/ha981muk-git"
-      ],
-      "skills": "Python, PyTorch, Machine Learning, AI Development, Data Analysis, Full-Stack Development",
-      "image": "https://ha981muk-git.github.io/assets/images/profile-placeholder.jpg" 
-    }
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Harsh Mukhiya",
+    "jobTitle": "AI/ML Development & Full-Stack Development",
+    "url": "https://ha981muk-git.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/ha981muk/",
+      "https://github.com/ha981muk-git"
+    ],
+    "skills": "Python, PyTorch, Machine Learning, AI Development, Data Analysis, Full-Stack Development",
+    "image": "https://ha981muk-git.github.io/assets/images/profile-placeholder.jpg"
+  }
   </script>
-  
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css">
-  <link href="assets/css/style.css" rel="stylesheet">
-  
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BXKLXCKJ8X"></script>
-  <script src="assets/js/analysisGoogle.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 
 <body>
-  <!-- Navigation -->
+  <!-- EU Consent Banner -->
+  <div id="cookie-banner" class="position-fixed w-100" style="bottom:0; left:0; z-index:1080; display:none; background:#111; color:#fff;">
+    <div class="container py-3">
+      <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center">
+        <div class="flex-grow-1 pr-md-3" style="line-height:1.4;">
+          <strong>Cookies &amp; Privacy</strong><br />
+          We use cookies to measure traffic (Google Analytics). Toggle categories and choose <em>Save</em>.
+          See our <a href="/privacy-policy.html" class="text-warning" target="_blank" rel="noopener">Privacy Policy</a>.
+        </div>
+
+        <div class="mt-3 mt-md-0">
+          <div class="custom-control custom-switch mb-2">
+            <input type="checkbox" class="custom-control-input" id="consent-analytics" />
+            <label class="custom-control-label" for="consent-analytics">Analytics (GA4)</label>
+          </div>
+
+          <div class="btn-group btn-group-sm" role="group" aria-label="cookie choices">
+            <button id="btn-reject-all" class="btn btn-outline-light">Reject all</button>
+            <button id="btn-accept-all" class="btn btn-warning">Accept all</button>
+            <button id="btn-save-cookies" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container">
         <a class="navbar-brand font-weight-bold" href="#" style="color: var(--primary-color);">HM</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Technical Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#certifications">Certifications</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Technical Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  
-  <!-- Dark Mode Toggle -->
+
   <div id="dark-mode-container"></div>
-  
+
   <main>
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero-section">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6 text-center text-md-left" data-aos="fade-right">
             <h1 class="display-4 mb-4">Harsh Mukhiya</h1>
-            <p class="lead mb-4">Building Intelligent Web Solutions<br><span style="font-size: 32px; font-weight: bold;">Full-Stack Developer</span></p>
+            <p class="lead mb-4">Building Intelligent Web Solutions<br /><span style="font-size:32px; font-weight:700;">Full-Stack Developer</span></p>
             <a href="#contact" class="btn btn-light btn-lg mt-3">Let's Connect</a>
           </div>
           <div class="col-md-6 text-center" data-aos="fade-left">
-            <img loading="lazy" src="assets/images/profile-placeholder.jpg" alt="Harsh Mukhiya professional portrait" class="profile-image">
+            <img loading="lazy" src="assets/images/profile-placeholder.jpg" alt="Harsh Mukhiya professional portrait" class="profile-image" />
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- About Section -->
+
+    <!-- About -->
     <section id="about" class="section">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">About Me</h2>
@@ -108,13 +117,14 @@
           <div class="col-lg-6 mb-4" data-aos="fade-right">
             <div class="card h-100">
               <div class="card-body">
-                <h5 class="card-title">Summary</h5>   
+                <h5 class="card-title">Summary</h5>
                 <p class="lead">Innovative developer specializing in AI/ML solutions with 1+ years of experience in building intelligent systems and data-driven applications.</p>
               </div>
             </div>
           </div>
+
           <div class="col-lg-6" data-aos="fade-left">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title">Quick Stats</h5>
                 <div class="row text-center mt-4">
@@ -137,68 +147,56 @@
         </div>
       </div>
     </section>
-    
-    <!-- Experience Section -->
+
+    <!-- Experience -->
     <section id="experience" class="section bg-light">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">Experience</h2>
         <div class="timeline" id="experience-container">
-          <!-- Experience will be loaded here -->
           <div id="experience-loading" class="text-center">
-            <div class="spinner-border text-primary" role="status">
-              <span class="sr-only">Loading...</span>
-            </div>
+            <div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- Projects Section -->
+
+    <!-- Projects -->
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">Projects</h2>
         <div class="row" id="projects-container">
-          <!-- Projects will be loaded here -->
           <div id="projects-loading" class="col-12 text-center">
-            <div class="spinner-border text-primary" role="status">
-              <span class="sr-only">Loading...</span>
-            </div>
+            <div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- Skills Section -->
+
+    <!-- Skills -->
     <section id="skills" class="section bg-light">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
         <div class="row" id="skills-container">
-          <!-- Skills will be loaded here -->
           <div id="skills-loading" class="col-12 text-center">
-            <div class="spinner-border text-primary" role="status">
-              <span class="sr-only">Loading...</span>
-            </div>
+            <div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- Certifications Section -->
+
+    <!-- Certifications -->
     <section id="certifications" class="section">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">Certifications</h2>
         <div class="row certification-grid" id="certifications-container">
-          <!-- Certifications will be loaded here -->
           <div id="certifications-loading" class="col-12 text-center">
-            <div class="spinner-border text-primary" role="status">
-              <span class="sr-only">Loading...</span>
-            </div>
+            <div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- Contact Section -->
+
+    <!-- Contact -->
     <section id="contact" class="section bg-light">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">Get in Touch</h2>
@@ -207,20 +205,20 @@
             <form class="contact-form" data-aos="zoom-in" action="https://formspree.io/f/mgvvrjeb" method="post">
               <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your full name" aria-label="Your name">
+                <input id="name" name="name" type="text" class="form-control" required placeholder="Enter your full name" aria-label="Your name" />
               </div>
               <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email" aria-label="Your email">
+                <input id="email" name="email" type="email" class="form-control" required placeholder="Enter your email" aria-label="Your email" />
               </div>
               <div class="form-group">
                 <label for="message">Your Message</label>
-                <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Write your message here..." aria-label="Your message"></textarea>
+                <textarea id="message" name="message" class="form-control" rows="5" required placeholder="Write your message here..." aria-label="Your message"></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-block">Send Message</button>
             </form>
-            <!-- Success Message (Hidden by Default) -->
-            <div id="form-success" class="alert alert-success mt-4" role="alert" style="display: none;">
+
+            <div id="form-success" class="alert alert-success mt-4" role="alert" style="display:none;">
               Message sent successfully! 🎉 I'll respond within 24 hours.
             </div>
           </div>
@@ -228,262 +226,241 @@
       </div>
     </section>
   </main>
-  
+
   <!-- Social Links -->
   <div class="social-links">
     <a href="https://www.linkedin.com/in/ha981muk" target="_blank" rel="noopener" data-tooltip="LinkedIn">
-      <i class="fab fa-linkedin" aria-hidden="true"></i>
-      <span class="sr-only">LinkedIn</span>
+      <i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span>
     </a>
     <a href="https://github.com/ha981muk-git" target="_blank" rel="noopener" data-tooltip="GitHub">
-      <i class="fab fa-github" aria-hidden="true"></i>
-      <span class="sr-only">GitHub</span>
+      <i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">GitHub</span>
     </a>
     <a href="assets/docs/cv.pdf" download="Harsh_Mukhiya_Resume.pdf" data-tooltip="Download Resume">
-      <i class="fas fa-file-download" aria-hidden="true"></i>
-      <span class="sr-only">Download Resume</span>
+      <i class="fas fa-file-download" aria-hidden="true"></i><span class="sr-only">Download Resume</span>
     </a>
   </div>
-  
+
   <!-- Footer -->
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <p>© 2025 Harsh Mukhiya. All rights reserved.</p>
-        </div>
+        <div class="col-md-6"><p>© 2025 Harsh Mukhiya. All rights reserved.</p></div>
         <div class="col-md-6 text-md-right">
           <a href="privacy-policy.html" class="mr-3">Privacy Policy</a>
-          <a href="sitemap.xml">Sitemap</a>
+          <a href="#" id="manage-cookies">Manage Cookies</a>
         </div>
       </div>
     </div>
   </footer>
-  
+
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
-  
+
   <script>
-    // Preload functionality
-    document.documentElement.classList.add('preload');
-    window.addEventListener('load', () => {
-      document.documentElement.classList.remove('preload');
-    });
-    
-    // Initialize AOS (Animate on Scroll)
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-    
-    // Smooth scroll functionality
-    $('a[href*="#"]').on('click', function(e) {
-      e.preventDefault();
-      $('html, body').animate({
-        scrollTop: $($(this).attr('href')).offset().top - 70
-      }, 500);
-    });
-    
-    // Navbar background change on scroll
-    $(window).scroll(function() {
-      if ($(this).scrollTop() > 50) {
-        $('.navbar').addClass('scrolled');
-      } else {
-        $('.navbar').removeClass('scrolled');
-      }
-    });
-    
-    // Cookie Consent
-    // Cookie Consent with error handling
-    window.addEventListener("load", function(){
-      if (window.cookieconsent) {
-        try {
-          window.cookieconsent.initialise({
-            "palette": {
-              "popup": {
-                "background": "#000"
-              },
-              "button": {
-                "background": "#f1d600"
-              }
-            },
-            "theme": "classic",
-            "content": {
-              "message": "This website uses cookies to ensure you get the best experience on our website.",
-              "dismiss": "Got it!",
-              "link": "Learn more",
-              "href": "/privacy-policy.html"
-            }
-          });
-        } catch (error) {
-          console.log('Cookie consent not available');
-        }
-      }
-    });
-    
-    // Form Submission Handling
-    document.querySelector('.contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Get form data
-      const formData = new FormData(this);
-      
-      // Send request
-      fetch(this.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      .then(response => {
-        if (response.ok) {
-          // Show success message
-          document.getElementById('form-success').style.display = 'block';
-          // Reset form
-          this.reset();
-          // Hide message after 5 seconds
-          setTimeout(() => {
-            document.getElementById('form-success').style.display = 'none';
-          }, 5000);
-        }
-      })
-      .catch(error => {
-        console.error('Error!', error.message);
+  (function () {
+    const GA_ID = 'G-BXKLXCKJ8X';
+    const CONSENT_KEY = 'hm_cookie_consent_v1';
+
+    const $ = (sel) => document.querySelector(sel);
+    const on = (el, evt, fn) => el && el.addEventListener(evt, fn);
+
+    function getConsent() {
+      try { return JSON.parse(localStorage.getItem(CONSENT_KEY)) || null; } catch { return null; }
+    }
+    function setConsent(consent) { localStorage.setItem(CONSENT_KEY, JSON.stringify(consent)); }
+
+    function deleteCookie(name) {
+      const domains = [location.hostname, '.' + location.hostname.replace(/^www\./, '')];
+      const paths = ['/', ''];
+      domains.forEach(d => paths.forEach(p => {
+        document.cookie = `${name}=; Max-Age=0; path=${p}; domain=${d}; SameSite=Lax`;
+      }));
+    }
+
+    function purgeGaCookies() {
+      document.cookie.split(';').forEach(c => {
+        const n = c.split('=')[0].trim();
+        if (/^_ga($|_|-)|^_gid$|^_gat/.test(n)) deleteCookie(n);
       });
+    }
+
+    function loadGA() {
+      if (window.gtag) return;
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      document.head.appendChild(s);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+
+      gtag('consent', 'default', {
+        analytics_storage: 'granted',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+
+      gtag('js', new Date());
+      gtag('config', GA_ID, { anonymize_ip: true });
+    }
+
+    function applyConsent(consent) {
+      if (consent && consent.analytics === true) loadGA();
+      else purgeGaCookies();
+    }
+
+    function showBanner(prefill) {
+      const banner = $('#cookie-banner');
+      const analyticsToggle = $('#consent-analytics');
+      if (!banner) return;
+      banner.style.display = 'block';
+      analyticsToggle.checked = !!(prefill && prefill.analytics);
+
+      on($('#btn-accept-all'), 'click', () => { const c = { analytics:true, ts:Date.now(), version:1 }; setConsent(c); banner.style.display='none'; applyConsent(c); });
+      on($('#btn-reject-all'), 'click', () => { const c = { analytics:false, ts:Date.now(), version:1 }; setConsent(c); banner.style.display='none'; applyConsent(c); });
+      on($('#btn-save-cookies'), 'click', () => { const c = { analytics:!!analyticsToggle.checked, ts:Date.now(), version:1 }; setConsent(c); banner.style.display='none'; applyConsent(c); });
+    }
+
+    on(document, 'click', (e) => {
+      const t = e.target;
+      if (t && t.id === 'manage-cookies') { e.preventDefault(); showBanner(getConsent()); }
     });
-    
-    // Load JSON Data
-    fetch('data.json')
-      .then(response => response.json())
-      .then(data => {
-        // Hide loading indicators
-        document.getElementById('projects-loading').style.display = 'none';
-        document.getElementById('experience-loading').style.display = 'none';
-        document.getElementById('skills-loading').style.display = 'none';
-        document.getElementById('certifications-loading').style.display = 'none';
-        
-        // Load Projects
-        const colors = ["bg-danger", "bg-primary", "bg-success", "bg-warning", "bg-info"]; // Bootstrap color classes
-        const projectsContainer = document.getElementById('projects-container');
+
+    const current = getConsent();
+    if (current) applyConsent(current); else showBanner(null);
+  })();
+  </script>
+
+  <script>
+  // UI init, form handling, JSON loader
+  document.documentElement.classList.add('preload');
+  window.addEventListener('load', () => document.documentElement.classList.remove('preload'));
+
+  AOS.init({ duration: 1000, once: true });
+
+  // Smooth scroll
+  $('a[href*="#"]').on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 70 }, 500);
+  });
+
+  // Navbar background on scroll
+  $(window).on('scroll', function () {
+    $('.navbar').toggleClass('scrolled', $(this).scrollTop() > 50);
+  });
+
+  // Contact form submit
+  const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      fetch(this.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } })
+        .then(response => {
+          if (response.ok) {
+            document.getElementById('form-success').style.display = 'block';
+            this.reset();
+            setTimeout(() => document.getElementById('form-success').style.display = 'none', 5000);
+          }
+        })
+        .catch(err => console.error('Error!', err && err.message));
+    });
+  }
+
+  // Load content from data.json
+  fetch('data.json')
+    .then(r => r.json())
+    .then(data => {
+      // hide loaders
+      ['projects','experience','skills','certifications'].forEach(id => {
+        const el = document.getElementById(id + '-loading'); if (el) el.style.display = 'none';
+      });
+
+      // Projects
+      const colors = ['bg-danger','bg-primary','bg-success','bg-warning','bg-info'];
+      const projectsContainer = document.getElementById('projects-container');
+      if (projectsContainer && data.projects) {
         data.projects.forEach(project => {
-          const projectElement = document.createElement('div');
-          projectElement.classList.add('col-lg-4', 'mb-4');
-          projectElement.setAttribute('data-aos', 'zoom-in');
-          
-          projectElement.innerHTML = `
+          const col = document.createElement('div');
+          col.className = 'col-lg-4 mb-4';
+          col.setAttribute('data-aos', 'zoom-in');
+          col.innerHTML = `
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title">${project.title}</h5>
-                <p class="text-muted">${project.date}</p>
-                <ul class="list-unstyled">
-                  ${project.description.map(desc => `<li class="mb-2">${desc}</li>`).join('')}
-                </ul>
-                <div class="tech-stack">
-                  ${project.techStack.map((tech, index) => `<span class="badge ${colors[index % colors.length]}">${tech}</span>`).join(' ')}
-                </div>
-                <a href="${project.repoLink}" class="btn btn-outline-primary mt-3" target="_blank" rel="noopener">
-                  <i class="fab fa-github"></i> View Repository
-                </a>
+                <p class="text-muted">${project.date || ''}</p>
+                <ul class="list-unstyled mb-2">${(project.description || []).map(d => '<li>' + d + '</li>').join('')}</ul>
+                <div class="tech-stack mb-3">${(project.techStack || []).map((t,i) => '<span class="badge ' + colors[i % colors.length] + ' mr-1">' + t + '</span>').join('')}</div>
+                ${project.repoLink ? `<a href="${project.repoLink}" target="_blank" rel="noopener" class="btn btn-outline-primary"><i class="fab fa-github"></i> View Repository</a>` : ''}
               </div>
-            </div>
-          `;
-          projectsContainer.appendChild(projectElement);
+            </div>`;
+          projectsContainer.appendChild(col);
         });
-        
-        // Load Experience
-        const experienceContainer = document.getElementById('experience-container');
-        data.experience.forEach((exp, index) => {
-          const experienceElement = document.createElement('div');
-          experienceElement.classList.add('row', 'timeline-item');
-          experienceElement.setAttribute('data-aos', index % 2 === 0 ? 'fade-right' : 'fade-left');
-          experienceElement.innerHTML = `
-            <div class="col-md-6 ${index % 2 !== 0 ? 'offset-md-6' : ''}">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">${exp.title}</h5>
-                  <p class="text-muted">${exp.company} (${exp.date})</p>
-                  <ul class="list-unstyled">
-                    ${exp.tasks.map(task => `<li class="mb-3">${task}</li>`).join('')}
-                  </ul>
-                </div>
+      }
+
+      // Experience
+      const experienceContainer = document.getElementById('experience-container');
+      if (experienceContainer && data.experience) {
+        data.experience.forEach((exp, i) => {
+          const row = document.createElement('div');
+          row.className = 'row timeline-item';
+          row.setAttribute('data-aos', i % 2 === 0 ? 'fade-right' : 'fade-left');
+          row.innerHTML = `
+            <div class="col-md-6 ${i % 2 !== 0 ? 'offset-md-6' : ''}">
+              <div class="card"><div class="card-body">
+                <h5 class="card-title">${exp.title}</h5>
+                <p class="text-muted">${exp.company || ''} ${exp.date ? '(' + exp.date + ')' : ''}</p>
+                <ul class="list-unstyled">${(exp.tasks || []).map(t => '<li>' + t + '</li>').join('')}</ul>
+              </div></div>
+            </div>`;
+          experienceContainer.appendChild(row);
+        });
+      }
+
+      // Certifications
+      const certificationsContainer = document.getElementById('certifications-container');
+      if (certificationsContainer && data.certifications) {
+        const icons = ['fas fa-robot','fas fa-brain','fab fa-python','fas fa-lock','fas fa-database','fab fa-java'];
+        data.certifications.forEach((c, i) => {
+          const col = document.createElement('div');
+          col.className = 'col-lg-4 mb-4';
+          col.setAttribute('data-aos','zoom-in');
+          col.setAttribute('data-aos-delay', String(i * 100));
+          col.innerHTML = `
+            <div class="certification-card p-3">
+              <div class="d-flex align-items-center mb-3">
+                <i class="${icons[i % icons.length]} certification-icon mr-3" aria-hidden="true"></i>
+                <div><h5 class="mb-0">${c.title}</h5><small class="text-muted">${c.organization || ''} ${c.date ? ' • ' + c.date : ''}</small></div>
               </div>
-            </div>
-          `;
-          experienceContainer.appendChild(experienceElement);
+              <div>${(c.tags || []).map(t => '<span class="tag mr-1">' + t + '</span>').join('')}</div>
+            </div>`;
+          certificationsContainer.appendChild(col);
         });
-        
-        // Load Certifications
-        const certificationIcon = [
-          "fas fa-robot", 
-          "fas fa-brain",  
-          "fab fa-python",
-          "fas fa-lock", 
-          "fas fa-database",
-          "fab fa-java"
-        ];
-        
-        const certificationsContainer = document.getElementById('certifications-container');
-        data.certifications.forEach((cert, index) => {
-          const certificationElement = document.createElement('div');
-          certificationElement.classList.add('col-lg-4', 'mb-4');
-          certificationElement.setAttribute('data-aos', 'zoom-in');
-          certificationElement.setAttribute('data-aos-delay', index * 100);
-          certificationElement.innerHTML = `
-            <div class="certification-card">
-              <div class="certification-header">
-                <i class="${certificationIcon[index % certificationIcon.length]} certification-icon" aria-hidden="true"></i>
-                ${cert.tags.includes('NEW') ? '<div class="certification-badge">NEW</div>' : ''}
-              </div>
-              <div class="certification-body">
-                <h3>${cert.title}</h3>
-                <div class="certification-meta">
-                  <span class="cert-org">${cert.organization}</span>
-                  <span class="cert-date">${cert.date}</span>
-                </div>
-                <div class="certification-tags">
-                  ${cert.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                </div>
-              </div>
-            </div>
-          `;
-          certificationsContainer.appendChild(certificationElement);
+      }
+
+      // Skills
+      const skillsContainer = document.getElementById('skills-container');
+      if (skillsContainer && data.skills) {
+        data.skills.forEach((cat, i) => {
+          const col = document.createElement('div');
+          col.className = 'col-md-6';
+          col.setAttribute('data-aos', i % 2 === 0 ? 'fade-right' : 'fade-left');
+          col.innerHTML = `<div class="card mb-4"><div class="card-body"><h5 class="card-title">${cat.category}</h5>${(cat.skills || []).map(s => '<span class="skill-badge">' + s + '</span>').join('')}</div></div>`;
+          skillsContainer.appendChild(col);
         });
-        
-        // Load Skills
-        const skillsContainer = document.getElementById('skills-container');
-        data.skills.forEach((skillCategory, index) => {
-          const skillElement = document.createElement('div');
-          skillElement.classList.add('col-md-6');
-          skillElement.setAttribute('data-aos', index % 2 === 0 ? 'fade-right' : 'fade-left');
-          skillElement.innerHTML = `
-            <div class="card mb-4">
-              <div class="card-body">
-                <h5 class="card-title">${skillCategory.category}</h5>
-                ${skillCategory.skills.map(skill => `<div class="skill-badge">${skill}</div>`).join('')}
-              </div>
-            </div>
-          `;
-          skillsContainer.appendChild(skillElement);
-        });
-      })
-      .catch(error => {
-        console.error('Error loading JSON data:', error);
-        // Show error messages in loading containers
-        const loadingElements = document.querySelectorAll('[id$="-loading"]');
-        loadingElements.forEach(el => {
-          el.innerHTML = `<div class="alert alert-danger">Failed to load data. Please refresh the page.</div>`;
-        });
+      }
+    })
+    .catch(err => {
+      console.error('Error loading JSON data:', err);
+      document.querySelectorAll('[id$="-loading"]').forEach(el => {
+        el.innerHTML = '<div class="alert alert-danger">Failed to load data. Please refresh the page.</div>';
       });
-      
-    // Initialize dark mode if script exists
-    if (typeof initDarkMode === 'function') {
-      initDarkMode();
-    }
+    });
   </script>
 </body>
 </html>
