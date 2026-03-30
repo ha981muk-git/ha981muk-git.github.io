@@ -81,7 +81,8 @@
         "title": "Web Security Fundamentals",
         "organization": "Hacksplaining",
         "date": "2025",
-        "tags": ["OWASP", "Web Security"]
+        "tags": ["OWASP", "Web Security"],
+        "link": "assets/docs/Hacksplaining Completion Certificate.pdf"
       },
       {
         "title": "Python Programming Gold Level",
@@ -93,7 +94,8 @@
         "title": "Machine Learning Fundamentals",
         "organization": "DataCamp",
         "date": "2021",
-        "tags": ["Scikit-learn", "Pandas"]
+        "tags": ["Scikit-learn", "Pandas"],
+        "link": "assets/docs/Machine_Learning_Certificate.pdf"
       }
     ], 
     "skills": [
