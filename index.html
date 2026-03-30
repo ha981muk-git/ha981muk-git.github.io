@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 
@@ -100,8 +101,9 @@
         <div class="row align-items-center">
           <div class="col-md-6 text-center text-md-left" data-aos="fade-right">
             <h1 class="display-4 mb-4">Harsh Mukhiya</h1>
-            <p class="lead mb-4">Building Intelligent Web Solutions<br /><span style="font-size:32px; font-weight:700;">Full-Stack Developer</span></p>
-            <a href="#contact" class="btn btn-light btn-lg mt-3">Let's Connect</a>
+            <p class="lead mb-4">Building Intelligent Web Solutions<br /><span style="font-size:32px; font-weight:700; color: #ffffff;" id="typed-text"></span></p>
+            <a href="#contact" class="btn btn-light btn-lg mt-3 pr-4 pl-4 mr-2">Let's Connect</a>
+            <a href="assets/docs/cv.pdf" download="Harsh_Mukhiya_Resume.pdf" class="btn btn-outline-light btn-lg mt-3 ml-2">Download CV</a>
           </div>
           <div class="col-md-6 text-center" data-aos="fade-left">
             <img loading="lazy" src="assets/images/profile-placeholder.jpg" alt="Harsh Mukhiya professional portrait" class="profile-image" />
@@ -259,6 +261,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <script>
   (function () {
@@ -340,7 +343,20 @@
   <script>
   // UI init, form handling, JSON loader
   document.documentElement.classList.add('preload');
-  window.addEventListener('load', () => document.documentElement.classList.remove('preload'));
+  window.addEventListener('load', () => {
+    document.documentElement.classList.remove('preload');
+    
+    // Initialize Typed.js
+    if (document.getElementById('typed-text')) {
+      new Typed('#typed-text', {
+        strings: ['AI & ML Developer', 'Full-Stack Engineer', 'Data Solutions Architect'],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 2000,
+        loop: true
+      });
+    }
+  });
 
   AOS.init({ duration: 1000, once: true });
 
@@ -393,7 +409,7 @@
       });
 
       // Projects
-      const colors = ['bg-danger','bg-primary','bg-success','bg-warning','bg-info'];
+      const colors = ['badge-danger','badge-primary','badge-success','badge-warning','badge-info','badge-dark'];
       const projectsContainer = document.getElementById('projects-container');
       if (projectsContainer && data.projects) {
         data.projects.forEach(project => {
@@ -401,13 +417,19 @@
           col.className = 'col-lg-4 mb-4';
           col.setAttribute('data-aos', 'zoom-in');
           col.innerHTML = `
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">${project.title}</h5>
-                <p class="text-muted">${project.date || ''}</p>
-                <ul class="list-unstyled mb-2">${(project.description || []).map(d => '<li>' + d + '</li>').join('')}</ul>
-                <div class="tech-stack mb-3">${(project.techStack || []).map((t,i) => '<span class="badge ' + colors[i % colors.length] + ' mr-1">' + t + '</span>').join('')}</div>
-                ${project.repoLink ? `<a href="${project.repoLink}" target="_blank" rel="noopener" class="btn btn-outline-primary"><i class="fab fa-github"></i> View Repository</a>` : ''}
+            <div class="card h-100 shadow-sm border-0 project-card">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title font-weight-bold">${project.title}</h5>
+                <p class="text-muted small mb-3"><i class="far fa-calendar-alt mr-1"></i>${project.date || ''}</p>
+                <div class="tech-stack mb-3">
+                  ${(project.techStack || []).map((t,i) => '<span class="badge badge-pill ' + colors[i % colors.length] + ' mr-1 mb-1 px-2 py-1">' + t + '</span>').join('')}
+                </div>
+                <ul class="list-unstyled mb-4 flex-grow-1 text-secondary" style="font-size: 0.95rem;">
+                  ${(project.description || []).map(d => '<li class="mb-2">' + d + '</li>').join('')}
+                </ul>
+                <div class="mt-auto">
+                  ${project.repoLink ? `<a href="${project.repoLink}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm font-weight-bold"><i class="fas fa-external-link-alt mr-1"></i> View Project</a>` : ''}
+                </div>
               </div>
             </div>`;
           projectsContainer.appendChild(col);
@@ -459,9 +481,17 @@
       if (skillsContainer && data.skills) {
         data.skills.forEach((cat, i) => {
           const col = document.createElement('div');
-          col.className = 'col-md-6';
+          col.className = 'col-md-6 mb-4';
           col.setAttribute('data-aos', i % 2 === 0 ? 'fade-right' : 'fade-left');
-          col.innerHTML = `<div class="card mb-4"><div class="card-body"><h5 class="card-title">${cat.category}</h5>${(cat.skills || []).map(s => '<span class="skill-badge">' + s + '</span>').join('')}</div></div>`;
+          col.innerHTML = `
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold pb-2 mb-3 border-bottom">${cat.category}</h5>
+                <div class="d-flex flex-wrap">
+                  ${(cat.skills || []).map(s => '<span class="skill-badge">' + s + '</span>').join('')}
+                </div>
+              </div>
+            </div>`;
           skillsContainer.appendChild(col);
         });
       }

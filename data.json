@@ -1,56 +1,58 @@
 {
     "projects": [
       {
-        "title": "Automatic Classification of German Business Documents using BERT",
-        "date": "Nov 2025 - Present",
+        "title": "InstantPortfolio: AI-Powered Portfolio Generator",
+        "date": "Jan 2026 - Present",
         "description": [
-          "🤖 Developed a BERT-based system to automatically classify German business documents such as invoices, contracts, and complaints.",
-          "📊 Built and compared multiple German BERT variants",
-          "🚀 Exposed the model via a REST API with a minimal web interface for real-time classification."
+          "🛠️ Developing a web application for AI-based creation of professional portfolios from resumes",
+          "🏗️ Building the backend engine for resume parsing, API services, and live deployment integration",
+          "🚀 Live App: <a href='https://instantportfolio.dpdns.org/' target='_blank' style='color:#8b5cf6; font-weight:bold; text-decoration:none;'>[Link]</a>"
         ],
-        "techStack": ["Python 3.10+", "PyTorch", "Hugging Face Transformers", "scikit-learn", "FastAPI / Flask"],
-        "repoLink": "https://github.com/ha981muk-git/german-doc-classification"
+        "techStack": ["Python", "FastAPI", "React", "Oracle Cloud", "Cloudflare DNS", "OpenAI"],
+        "repoLink": "https://instantportfolio.dpdns.org/"
       },
       {
-        "title": "6/49 Statistical Visualizations Shiny App",
-        "date": "Sept 2025 - Present",
+        "title": "AI-Powered Classification of German Business Documents",
+        "date": "Nov 2025 - Dec 2025",
         "description": [
-          "🎲 Explore an interactive Shiny dashboard built for Lotto 6/49 data analysis.",
-          "📊 Discover historical draw through dynamic charts and visualizations.",
-          "🚀 Check it out live and interact with the data yourself: <a href='https://lotteryinsights.dpdns.org/' target='_blank' style='color:#8b5cf6; font-weight:bold; text-decoration:none;'>[Click me]</a>"
+          "🤖 Developed an AI/NLP system to automatically classify business documents.",
+          "🧠 Utilized Transformer-based language models (BERT) for precise text understanding.",
+          "⚡ Developed a REST API and a web interface for real-time predictions."
         ],
-        "techStack": ["R Programming", "HTML5", "CSS", "R Shiny"],
+        "techStack": ["Python", "PyTorch", "Hugging Face Transformers", "FastAPI", "scikit-learn"],
+        "repoLink": "https://github.com/ha981muk-git/german_document_classifier"
+      },
+      {
+        "title": "Statistical Visualization of Lotto 6/49 (Shiny App)",
+        "date": "Sep 2025 - Nov 2025",
+        "description": [
+          "🎲 Interactive Shiny dashboard for Lotto 6/49 data analyses.",
+          "📊 Visualization of historical trends through dynamic charts.",
+          "🚀 Live App: <a href='https://lottery-insights.shinyapps.io/lottery_shinyapp_v2/' target='_blank' style='color:#8b5cf6; font-weight:bold; text-decoration:none;'>[Link]</a>"
+        ],
+        "techStack": ["R", "Shiny", "HTML5", "CSS"],
         "repoLink": "https://lottery-insights.shinyapps.io/lottery_shinyapp_v2/"
-      },
-      {
-        "title": "Personal Portfolio Website",
-        "date": "Jan 2025 - Feb 2025",
-        "description": [
-          "🛠️ Developed responsive portfolio using HTML/CSS/JavaScript",
-          "🚀 Deployed on current custom domain <a href=\"https://harshmukhiya.codes\" target=\"_blank\" class=\"text-decoration-none\" style=\"color: inherit;\"><span class=\"text-muted\">→</span> harshmukhiya.codes</a>"
-        ],
-        "techStack": ["JavaScript", "HTML5", "CSS"],
-        "repoLink": "https://github.com/ha981muk-git/ha981muk-git.github.io"
       }
     ],
     "experience": [
       {
-        "title": "Biostatistics and Programming",
+        "title": "Early Clinical Biostatistics",
         "company": "Sanofi-Aventis Deutschland GmbH",
-        "date": "Aug 2025 - Present",
+        "date": "Aug 2025 - Oct 2025",
         "tasks": [
-          "📊 Developed R programs to accelerate statistical analyses with clear, intuitive visualizations",
-          "🧮 Applied Bayesian statistical approaches to enhance uncertainty measurement and data-driven decision-making",
-          "📈 Designed study methodologies to strengthen decision-making in clinical trials and research projects"
+          "📊 Independent conception and implementation of an interactive R Shiny application for clinical studies",
+          "🧮 Implementation of Bayesian and frequentist models as well as multivariate analyses",
+          "📈 Development of user-friendly interfaces and meaningful data visualizations"
         ]
       },
       {
-        "title": "Artificial Intelligence and Deep Learning",
+        "title": "AI & Deep Learning",
         "company": "Sanofi-Aventis Deutschland GmbH",
         "date": "Aug 2024 - Nov 2024",
         "tasks": [
-          "✅ Spearheaded automated AI workflows using Metaflow",
-          "✅ Integrated RDKit, Scikit-learn and PyTorch in scalable pipelines"
+          "✅ Development of automated AI workflows using Netflix Metaflow",
+          "✅ Design of scalable pipelines with RDKit, Scikit-learn, and PyTorch",
+          "🤖 Implementation of ML solutions for predicting molecular properties"
         ]
       },
       {
@@ -58,8 +60,9 @@
         "company": "Sanofi-Aventis Deutschland GmbH",
         "date": "Aug 2023 - Oct 2023",
         "tasks": [
-          "📊 Optimized insulin production through data analysis",
-          "📈 Created production dashboards with Python/Seaborn"
+          "📊 Led data analyses to optimize insulin production",
+          "📈 Created interactive dashboards using Python, Matplotlib, and Seaborn",
+          "📉 Application of advanced statistical methods to reduce production bottlenecks"
         ]
       },
       {
@@ -67,67 +70,56 @@
         "company": "Sanofi-Aventis Deutschland GmbH",
         "date": "Feb 2023 - Apr 2023",
         "tasks": [
-          "💻 Built full-stack apps with Django/JavaScript",
-          "⚡ Engineered REST APIs handling 1000+ RPM"
+          "💻 Further development of a responsive visualization website using Flask, JavaScript, and JSME",
+          "⚡ Development of a robust backend architecture through multi-threading and optimized database queries",
+          "🚀 Reduction of API latency times through strategic database indexing"
         ]
       }
     ],
     "certifications": [
       {
-        "title": "Artificial Intelligence Intern",
-        "organization": "Sanofi",
-        "date": "2024",
-        "tags": ["Deep Learning", "Pharma AI"]
+        "title": "Web Security Fundamentals",
+        "organization": "Hacksplaining",
+        "date": "2025",
+        "tags": ["OWASP", "Web Security"]
       },
       {
-        "title": "ML Fundamentals in Python",
+        "title": "Python Programming Gold Level",
+        "organization": "HackerRank",
+        "date": "2024",
+        "tags": ["Python", "Algorithms"]
+      },
+      {
+        "title": "Machine Learning Fundamentals",
         "organization": "DataCamp",
         "date": "2021",
         "tags": ["Scikit-learn", "Pandas"]
-      },
-      {
-        "title": "Gold Level in Python",
-        "organization": "HackerRank",
-        "date": "2024",
-        "tags": ["Algorithms", "Problem Solving"]
-      },
-      {
-        "title": "Web Developer Security Training",
-        "organization": "Hackplaining",
-        "date": "2025",
-        "tags": ["OWASP", "Encryption", "Security Best Practices"]
-      },
-      {
-        "title": "Fundamentals in SQL",
-        "organization": "HackerRank",
-        "date": "2022",
-        "tags": ["Queries", "Database Design"]
-      }
-      ,
-      {
-        "title": "Silver Level in Java",
-        "organization": "HackerRank",
-        "date": "2024",
-        "tags": ["Algorithms", "Data Structures", "Problem Solving"]
       }
     ], 
     "skills": [
         {
-        "category": "AI/ML Stack",
-        "skills": ["Python", "PyTorch", "Scikit-learn", "Metaflow"]
+        "category": "Programming Languages",
+        "skills": ["Python (Advanced)", "R (Advanced)", "JavaScript (Intermediate)", "Java"]
         },
         {
-        "category": "Data Science",
-        "skills": ["Pandas", "NumPy", "Matplotlib", "Seaborn"]
+        "category": "Machine Learning & AI",
+        "skills": ["PyTorch", "Scikit-learn", "Hugging Face Transformers", "Metaflow"]
         },
         {
-        "category": "Programming",
-        "skills": ["Python", "R","Java", "JavaScript"]
+        "category": "Data Science & Analytics",
+        "skills": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter", "Shiny", "Excel"]
+        },
+        {
+        "category": "Web Development",
+        "skills": ["Django", "Flask", "FastAPI", "HTML5", "CSS3", "JavaScript", "REST APIs"]
         },
         {
         "category": "DevOps & Tools",
-        "skills": ["Git", "Linux CLI", "R Shiny App", "Bash-Script"]
+        "skills": ["Git", "GitHub", "Docker", "Linux CLI", "Bash Scripting", "uv", "Conda", "VS Code"]
+        },
+        {
+        "category": "Databases",
+        "skills": ["PostgreSQL", "MySQL"]
         }
     ]
-      
-  }
+}
