@@ -572,34 +572,68 @@
   
   /* Dark Mode Toggle */
   #dark-mode-container {
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    z-index: 1000;
+    position: relative;
+    z-index: 1;
   }
-  
-  .dark-mode-toggle {
-    background-color: var(--background-color);
+
+  .nav-theme-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .theme-picker {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow: 0 10px 24px rgba(22, 30, 59, 0.2);
+    backdrop-filter: blur(8px);
+  }
+
+  .dark-mode .theme-picker {
+    background: rgba(26, 26, 26, 0.86);
+    border-color: rgba(255, 255, 255, 0.14);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+  }
+
+  .theme-option {
+    width: 34px;
+    height: 34px;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
+    background: transparent;
+    color: var(--text-color);
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
   }
-  
-  .dark-mode-toggle:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+  .theme-option:hover {
+    transform: translateY(-1px);
+    background: rgba(74, 108, 247, 0.16);
   }
-  
-  .dark-mode-toggle i {
-    font-size: 1.5rem;
-    color: var(--text-color);
+
+  .theme-option.active {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 12px rgba(74, 108, 247, 0.45);
+  }
+
+  .theme-option i {
+    font-size: 0.95rem;
+  }
+
+  .theme-option:focus {
+    outline: none;
+  }
+
+  .theme-option:focus-visible {
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.35);
   }
   
   /* Responsive Design */
@@ -617,6 +651,11 @@
     .section {
       padding: 80px 0;
     }
+
+    .nav-theme-item {
+      margin-left: 0;
+      padding-left: 0.5rem;
+    }
     
     .timeline::before,
     .timeline-item::before {
@@ -631,6 +670,16 @@
   @media (max-width: 767px) {
     html {
       font-size: 14px;
+    }
+
+    .theme-picker {
+      padding: 5px;
+      gap: 5px;
+    }
+
+    .theme-option {
+      width: 30px;
+      height: 30px;
     }
     
     .hero-section {
