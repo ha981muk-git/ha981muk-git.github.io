@@ -40,8 +40,7 @@
         localStorage.removeItem('hm_theme_preference');
         savedTheme = null;
       }
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      if (savedTheme === 'dark') {
         document.documentElement.classList.add('dark-mode');
       }
     } catch (err) {}

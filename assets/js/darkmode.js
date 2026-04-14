@@ -9,10 +9,6 @@
     let hasExplicitPreference = false;
     let picker = null;
 
-    function getSystemTheme() {
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? THEME_DARK : THEME_LIGHT;
-    }
-
     function getSavedTheme() {
         try {
             const saved = localStorage.getItem(THEME_KEY);
@@ -35,7 +31,7 @@
         } catch (err) {}
 
         hasExplicitPreference = false;
-        return getSystemTheme();
+        return THEME_LIGHT;
     }
 
     function saveTheme(theme) {
@@ -103,21 +99,6 @@
         currentTheme = getSavedTheme();
         applyTheme(currentTheme);
         initThemePicker();
-
-        const media = window.matchMedia('(prefers-color-scheme: dark)');
-        const onSystemThemeChanged = () => {
-            if (!hasExplicitPreference) {
-                currentTheme = getSystemTheme();
-                applyTheme(currentTheme);
-                syncPicker();
-            }
-        };
-
-        if (typeof media.addEventListener === 'function') {
-            media.addEventListener('change', onSystemThemeChanged);
-        } else if (typeof media.addListener === 'function') {
-            media.addListener(onSystemThemeChanged);
-        }
     }
 
     document.addEventListener('DOMContentLoaded', initDarkMode);
