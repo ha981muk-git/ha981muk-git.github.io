@@ -4,9 +4,9 @@
         "title": "InstantPortfolio: AI-Powered Portfolio Generator",
         "date": "Jan 2026 - Present",
         "description": [
-          "🛠️ Developing a web application for AI-based creation of professional portfolios from resumes",
-          "🏗️ Building the backend engine for resume parsing, API services, and live deployment integration",
-          "🚀 Live App: <a href='https://instantportfolio.dpdns.org/' target='_blank' style='color:#8b5cf6; font-weight:bold; text-decoration:none;'>[Link]</a>"
+          "Designed and deployed a FastAPI backend that parses resumes and generates structured portfolio data using OpenAI APIs.",
+          "Implemented request validation, endpoint orchestration, and service integration for reliable profile generation workflows.",
+          "Live App: <a href='https://instantportfolio.dpdns.org/' target='_blank' rel='noopener'>instantportfolio.dpdns.org</a>"
         ],
         "techStack": ["Python", "FastAPI", "React", "Oracle Cloud", "Cloudflare DNS", "OpenAI"],
         "repoLink": "https://instantportfolio.dpdns.org/"
@@ -15,9 +15,9 @@
         "title": "AI-Powered Classification of German Business Documents",
         "date": "Nov 2025 - Dec 2025",
         "description": [
-          "🤖 Developed an AI/NLP system to automatically classify business documents.",
-          "🧠 Utilized Transformer-based language models (BERT) for precise text understanding.",
-          "⚡ Developed a REST API and a web interface for real-time predictions."
+          "Built a Transformer-powered classification service with a FastAPI inference layer for business document labeling.",
+          "Implemented REST endpoints for real-time predictions with structured response schemas and confidence scores.",
+          "Integrated preprocessing, model serving, and API response handling for production-ready inference."
         ],
         "techStack": ["Python", "PyTorch", "Hugging Face Transformers", "FastAPI", "scikit-learn"],
         "repoLink": "https://github.com/ha981muk-git/german_document_classifier"
@@ -26,9 +26,9 @@
         "title": "Statistical Visualization of Lotto 6/49 (Shiny App)",
         "date": "Sep 2025 - Nov 2025",
         "description": [
-          "🎲 Interactive Shiny dashboard for Lotto 6/49 data analyses.",
-          "📊 Visualization of historical trends through dynamic charts.",
-          "🚀 Live App: <a href='https://lottery-insights.shinyapps.io/lottery_shinyapp_v2/' target='_blank' style='color:#8b5cf6; font-weight:bold; text-decoration:none;'>[Link]</a>"
+          "Developed server-side R Shiny logic to process historical Lotto 6/49 datasets and return interactive analytics.",
+          "Implemented reusable data transformation pipelines and reactive filtering for fast chart updates.",
+          "Live App: <a href='https://lottery-insights.shinyapps.io/lottery_shinyapp_v2/' target='_blank' rel='noopener'>lottery-insights.shinyapps.io</a>"
         ],
         "techStack": ["R", "Shiny", "HTML5", "CSS"],
         "repoLink": "https://lottery-insights.shinyapps.io/lottery_shinyapp_v2/"
@@ -40,9 +40,9 @@
         "company": "Sanofi-Aventis Deutschland GmbH",
         "date": "Aug 2025 - Oct 2025",
         "tasks": [
-          "📊 Independent conception and implementation of an interactive R Shiny application for clinical studies",
-          "🧮 Implementation of Bayesian and frequentist models as well as multivariate analyses",
-          "📈 Development of user-friendly interfaces and meaningful data visualizations"
+          "Designed and delivered an R Shiny application with modular server-side logic for clinical study analysis.",
+          "Implemented Bayesian, frequentist, and multivariate analysis workflows as reusable computation modules.",
+          "Built reliable data-processing and reactive pipelines to support consistent analytics delivery for study teams."
         ]
       },
       {
@@ -50,9 +50,9 @@
         "company": "Sanofi-Aventis Deutschland GmbH",
         "date": "Aug 2024 - Nov 2024",
         "tasks": [
-          "✅ Development of automated AI workflows using Netflix Metaflow",
-          "✅ Design of scalable pipelines with RDKit, Scikit-learn, and PyTorch",
-          "🤖 Implementation of ML solutions for predicting molecular properties"
+          "Developed automated ML workflows with Netflix Metaflow for reproducible training and inference runs.",
+          "Designed scalable data and feature pipelines using RDKit, Scikit-learn, and PyTorch.",
+          "Implemented model-serving components for molecular property prediction in production-oriented workflows."
         ]
       },
       {
@@ -60,9 +60,9 @@
         "company": "Sanofi-Aventis Deutschland GmbH",
         "date": "Aug 2023 - Oct 2023",
         "tasks": [
-          "📊 Led data analyses to optimize insulin production",
-          "📈 Created interactive dashboards using Python, Matplotlib, and Seaborn",
-          "📉 Application of advanced statistical methods to reduce production bottlenecks"
+          "Built analysis pipelines to identify and prioritize insulin production bottlenecks.",
+          "Developed reproducible reporting dashboards in Python to support data-driven operational decisions.",
+          "Applied advanced statistical methods to improve process efficiency and production reliability."
         ]
       },
       {
@@ -70,9 +70,9 @@
         "company": "Sanofi-Aventis Deutschland GmbH",
         "date": "Feb 2023 - Apr 2023",
         "tasks": [
-          "💻 Further development of a responsive visualization website using Flask, JavaScript, and JSME",
-          "⚡ Development of a robust backend architecture through multi-threading and optimized database queries",
-          "🚀 Reduction of API latency times through strategic database indexing"
+          "Extended a Flask-based application backend and service endpoints for scientific visualization workflows.",
+          "Implemented multi-threaded processing and optimized database queries to improve service throughput.",
+          "Reduced API latency through indexing strategy and query-plan optimization."
         ]
       }
     ],
