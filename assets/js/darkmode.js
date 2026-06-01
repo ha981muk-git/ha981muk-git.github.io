@@ -6,14 +6,12 @@
     const LEGACY_AUTO = 'auto';
 
     let currentTheme = THEME_LIGHT;
-    let hasExplicitPreference = false;
     let picker = null;
 
     function getSavedTheme() {
         try {
             const saved = localStorage.getItem(THEME_KEY);
             if (saved === THEME_LIGHT || saved === THEME_DARK) {
-                hasExplicitPreference = true;
                 return saved;
             }
 
@@ -25,12 +23,10 @@
             if (legacy === THEME_LIGHT || legacy === THEME_DARK) {
                 localStorage.setItem(THEME_KEY, legacy);
                 localStorage.removeItem(LEGACY_THEME_KEY);
-                hasExplicitPreference = true;
                 return legacy;
             }
         } catch (err) {}
 
-        hasExplicitPreference = false;
         return THEME_LIGHT;
     }
 
@@ -50,7 +46,6 @@
 
     function setTheme(themeChoice) {
         currentTheme = themeChoice;
-        hasExplicitPreference = true;
         saveTheme(themeChoice);
         applyTheme(themeChoice);
         syncPicker();
